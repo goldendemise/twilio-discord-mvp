@@ -8,9 +8,9 @@ client = Twilio::REST::Client.new(account_sid, auth_token)
 
 from = TwilioCreds::MY_TWILIO_NUMBER # Your Twilio number
 to = TwilioCreds::MY_PHONE_NUMBER # Your mobile phone number
-puts(TwilioCreds::ACCOUNT_ID)
+
 client.messages.create(
 from: from,
 to: to,
-body: "Hey friend!"
+body: "The initial message didn't go through, maybe this one will."
 )
